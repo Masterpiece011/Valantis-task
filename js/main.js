@@ -3,7 +3,7 @@
 const apiURL = "https://api.valantis.store:41000/";
 
 const offset = 0;
-const limit = 200;
+const limit = 1500;
 
 
 const itemsPerPage = 50; //Количество продуктов на страницу
@@ -270,8 +270,8 @@ function clearAllFilters() {
 }
 
 async function initialLoad() {
-    fetchProducts('get_ids', { offset: offset });
-    fetchProducts('get_fields', { "field": "brand", "offset": 0 });
+    fetchProducts('get_ids', { offset: offset, limit: limit });
+    fetchProducts('get_fields', { "field": "brand", "offset": offset, "limit": limit });
 };
 
 
