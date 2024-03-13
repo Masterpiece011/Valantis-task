@@ -116,6 +116,7 @@ body {
 
 .catalog {
     padding: 40px 0;
+    min-height: 100vh;
 }
 
 .catalog__filter {
